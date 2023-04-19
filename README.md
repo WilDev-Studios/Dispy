@@ -18,8 +18,8 @@ import dispy
 client = dispy.DiscordApp("TOKEN") # Initialize a Discord application
 
 @client.listen(dispy.StartedEvent) # Listen to when the bot is started
-async def started_event(event) -> None:
-  await dispy.Logger.client_log("Bot started")
+async def started_event() -> None:
+  await client.logger.client_log("Bot started")
  
 client.start() # Start running the Discord application
 ```
